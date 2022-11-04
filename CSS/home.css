@@ -1,0 +1,328 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.layoutAwal {
+  /* background: url(Foto/bg1.png); */
+  width: 100%;
+  height: 100vh;
+  /* margin-top: -15px; */
+  background-size: cover;
+  animation: animate 16s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(/Foto/bg1.png);
+  }
+
+  50% {
+    background-image: url(/Foto/bg2.png);
+  }
+
+  75% {
+    background-image: url(/Foto/bg8.jpg);
+  }
+}
+
+nav {
+  background-color: rgb(138, 136, 136, 20%);
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1px 20px;
+  color: white;
+  font-size: 17px;
+  margin-top: 5px;
+  align-items: center;
+  /* padding: 1px 1px 5px 0px; */
+}
+
+.search {
+  padding-left: 100%;
+}
+
+a {
+  text-decoration: none;
+  padding: 8px;
+  color: white;
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.link::before,
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.link::before {
+  top: -3px;
+  transform-origin: left;
+}
+
+.link::after {
+  bottom: -3px;
+  transform-origin: right;
+}
+
+.link:hover::before,
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+input {
+  width: 100px;
+  border-radius: 10px;
+  margin-top: 3px;
+}
+
+li img {
+  width: 20px;
+  height: 20px;
+}
+
+.awal {
+  position: absolute;
+  bottom: 180px;
+  left: 200px;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 30px;
+}
+
+.judul {
+  /* color: white; */
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnim 3s steps(27);
+}
+
+@keyframes typingAnim {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.btn1 {
+  margin-left: 120px;
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  padding: 2px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background-color: white;
+  color: black;
+  transition: 0.4s;
+  width: 153px;
+  height: 43px;
+}
+
+.btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn2 button {
+  margin-top: 100px;
+  width: 150px;
+  height: 40px;
+  padding: 2px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid white;
+}
+
+.btn2 button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.layoutKedua {
+  width: 100%;
+  height: 200px;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+.active {
+  transform: scale(1);
+}
+
+.pembatas {
+  width: 800px;
+  position: relative;
+  left: 260px;
+  margin-top: 15px;
+}
+
+.dis {
+  text-align: center;
+  font-size: 18px;
+}
+
+.content {
+  background: url(/Foto/bg2.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.rotating-text {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  transform: translate(-80px);
+}
+
+.rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+}
+
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.rotating-text p .word .letter.in {
+  transition: 0.8 ease;
+}
+
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.w1 {
+  color: #f2d388;
+}
+
+.w2 {
+  color: #a7d0cd;
+}
+
+.w3 {
+  color: #b6e388;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.card1 {
+  width: 200px;
+  height: 220px;
+  margin: 5px;
+  background: url(/Foto/kaos.jpg);
+  background-size: cover;
+  margin: 15px;
+  border-radius: 7px;
+}
+
+.card1:hover {
+  width: 220px;
+  height: 240px;
+  transition: 0.6s;
+}
+
+.card2 {
+  width: 200px;
+  height: 220px;
+  margin: 5px;
+  background: url(/Foto/tunik.webp);
+  background-size: cover;
+  margin: 15px;
+  border-radius: 7px;
+}
+
+.card3 {
+  width: 200px;
+  height: 220px;
+  margin: 5px;
+  background: url(/Foto/celana.webp);
+  background-size: cover;
+  margin: 15px;
+  border-radius: 7px;
+}
