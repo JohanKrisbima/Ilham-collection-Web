@@ -1,0 +1,250 @@
+:root {
+  --body-bg: rgb(204, 204, 204);
+  --white: #ffffff;
+  --darkWhite: #ccc;
+  --black: #eeeeee;
+  --dark: #615c60;
+  --themeColor: #5f5f5f;
+  --pageShadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+/* Font Include */
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap");
+
+body {
+  background-color: var(--body-bg);
+}
+
+.page {
+  background: var(--white);
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: var(--pageShadow);
+}
+
+.page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+  overflow: hidden;
+}
+
+.bb {
+  border-bottom: 3px solid var(--darkWhite);
+}
+
+/* Top Section */
+.top-content {
+  padding-bottom: 15px;
+}
+.logo {
+  width: 80%;
+  display: flex;
+  /* background-color: aqua; */
+}
+.p1 {
+  width: 20%;
+  /* background-color: palegoldenrod; */
+}
+.p2 {
+  width: 80%;
+  padding-top: 15px;
+  line-height: 1x;
+  /* background-color: rgb(224, 154, 227); */
+}
+.logo img {
+  height: 110px;
+}
+.top-left p {
+  margin: 0;
+}
+
+.top-left .graphic-path {
+  height: 40px;
+  position: relative;
+}
+
+.top-left .graphic-path::before {
+  content: "";
+  height: 20px;
+  background-color: var(--dark);
+  position: absolute;
+  left: 15px;
+  right: 0;
+  top: -15px;
+  z-index: 2;
+}
+
+.top-left .graphic-path::after {
+  content: "";
+  height: 22px;
+  width: 17px;
+  background: var(--black);
+  position: absolute;
+  top: -13px;
+  left: 6px;
+  transform: rotate(45deg);
+}
+
+.top-left .graphic-path p {
+  color: var(--white);
+  height: 40px;
+  left: 0;
+  right: -100px;
+  text-transform: uppercase;
+  background-color: var(--themeColor);
+  font: 26px;
+  z-index: 3;
+  position: absolute;
+  padding-left: 10px;
+}
+
+/* User Store Section */
+.store-user {
+  padding-bottom: 25px;
+}
+
+.store-user p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.store-user .address {
+  font-weight: 400;
+}
+
+.ekstra {
+  display: flex;
+}
+.detail {
+  padding-top: 45px;
+  width: 45%;
+  height: auto;
+  /* background-color: peru; */
+  font-size: 16px;
+  line-height: 3px;
+}
+.garis {
+  width: 3px;
+  height: auto;
+  /* background-color: #615c60; */
+}
+.cus {
+  line-height: 3px;
+  width: 64%;
+  /* background-color: rgb(205, 63, 165); */
+}
+.cus1 {
+  padding-top: 10px;
+}
+.cus p {
+  line-height: 20px;
+}
+/* Product Section */
+thead {
+  color: #ffffff;
+  background-color: #615c60;
+  /* color: var(--white);
+    background: var(--themeColor); */
+}
+
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tr th:first-child,
+tr td:first-child {
+  text-align: left;
+}
+
+.media img {
+  height: 60px;
+  width: 60px;
+}
+
+.media p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.media p.title {
+  font-weight: 600;
+}
+
+/* Balance Info Section */
+.balance-info .table td,
+.balance-info .table th {
+  padding: 0;
+  border: 0;
+}
+
+.balance-info tr td:first-child {
+  font-weight: 600;
+}
+
+tfoot {
+  border-top: 2px solid var(--darkWhite);
+}
+
+tfoot td {
+  font-weight: 600;
+}
+#note {
+  line-height: 20px;
+}
+.warming {
+  color: red;
+}
+/* Cart BG */
+.cart-bg {
+  height: 250px;
+  bottom: 32px;
+  left: -40px;
+  opacity: 0.3;
+  position: absolute;
+}
+.wadah {
+  width: 100%;
+  /* background-color: palevioletred; */
+  display: flex;
+}
+.cart {
+  width: 60%;
+  /* background-color:rgb(44, 171, 15) */
+}
+.ttd {
+  padding-top: 28vh;
+  padding-left: 50px;
+  /* padding-right: 10px; */
+  height: 30vh;
+  width: 40%;
+  /* background-color: peru; */
+}
+.ttd img {
+  width: 200px;
+}
+/* Footer Section */
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  left: 75px;
+}
+
+footer hr {
+  margin-bottom: -22px;
+  border-top: 3px solid var(--darkWhite);
+}
+
+footer a {
+  color: var(--themeColor);
+}
+
+footer p {
+  padding: 6px;
+  border: 3px solid var(--darkWhite);
+  background-color: var(--white);
+  display: inline-block;
+}
